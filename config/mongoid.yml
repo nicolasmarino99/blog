@@ -1,0 +1,6 @@
+development:
+  clients:
+    default:
+      uri: mongodb+srv://nicolas:mipapamemima99@cluster0.2wq6c.mongodb.net/test
+      options:
+        server_selection_timeout: 5

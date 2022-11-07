@@ -13,6 +13,7 @@ require "action_mailer/railtie"
 require "action_view/railtie"
 require "action_cable/engine"
 require "sprockets/railtie"
+require "mongoid"
 # require "rails/test_unit/railtie"
 
 # Require the gems listed in Gemfile, including any gems
@@ -31,5 +32,8 @@ module Blog
 
     # Don't generate system test files.
     config.generators.system_tests = nil
+    config.generators do |g|
+      g.orm :mongoid
+    end
   end
 end
