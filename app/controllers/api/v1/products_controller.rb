@@ -6,12 +6,14 @@ class Api::V1::ProductsController < ApplicationController
       @products = Product.all.entries
       render json: @products
     else
-      @product = Product.find_by(
-        length: product_params[:length],
-        width: product_params[:width],
-        height: product_params[:height],
-        weight: product_params[:weight]
-      )
+      @product =
+        Product
+        .where(:weight.gte => product_params[:weight])
+        .and(:length.gte => product_params[:length])
+        .and(:height.gte => product_params[:height])
+        .and(:width.gte => product_params[:width])
+        .to_a
+        .first
       if @product.save
         render json: @product
       else
