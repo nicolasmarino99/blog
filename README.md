@@ -1,5 +1,5 @@
-# Facebook Clone
-how to run the project type in your cli:
+# Products website
+to run the project type in your cli:
 - bundle install;
 - yarn install;
 - mongodb:seed;
