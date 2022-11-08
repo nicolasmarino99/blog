@@ -1,24 +1,13 @@
-# README
+# Facebook Clone
+how to run the project type in your cli:
+- bundle install;
+- yarn install;
+- mongodb:seed;
+- rails s;
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Preview
 
-Things you may want to cover:
+endpoints:
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+get /api/v1/products?length=48&width=14&height=11&weight=42
+get /api/v1/products
